@@ -2,25 +2,35 @@
 #include<stdlib.h>
 int main(int argc, char *argv[])
 {
-        FILE *file;
-        char lines[100];
-
-
-        file = fopen(argv[1], "r");
-
-        if(file==NULL){
-                printf("my-cat:cannot open file\n");
+        if(argc==1){
                 exit(1);
         }
 
-        printf("Output of my-cat command\n");
+        else{
 
-        while(fscanf(file, "%[^\n]\n", lines)!=EOF)
-        {
-                printf("%s\n", lines);
+                for(int i=1; i<argc;i++){
+                        FILE *file;
+                        char lines[500];
 
+
+                        file = fopen(argv[i], "r");
+
+                        if(file==NULL){
+                                printf("my-cat:cannot open file\n");
+                                exit(1);
+                        }
+
+                        else{
+
+                                printf("Output of my-cat command\n");
+                                   while(fgets(lines,500,file)!=NULL){
+                                        printf("%s\n", lines);
+                                }
+                                }
+                                fclose(file);
+
+                }
         }
 
-        fclose(file);
         return 0;
 }
