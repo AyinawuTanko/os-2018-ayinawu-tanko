@@ -5,20 +5,20 @@
 // argc contains the number of aguments passed to the program
 int main(int argc, char *argv[])
 {
-        // If the name of the file is invoked without a file
+        // If the name of the file is invoked without a file(s)
         // exit
         if(argc==1){
                 exit(1);
         }
         
-        // else loop through the files and print its contents
+        // else loop through the file(s) and print its contents
         else{
 
                 for(int i=1; i<argc;i++){
                         FILE *file;
                         char lines[500];
 
-                        // Opens the files and reads them
+                        // Opens the file(s) and reads them
                         file = fopen(argv[i], "r");
 
                         if(file==NULL){
