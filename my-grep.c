@@ -7,10 +7,12 @@
 // argc contains the number of aguments passed to the program
 int main(int argc, char *argv[])
 {
-
+	// If the name of the file is invoked without a file
+	// exit
 	if(argc==1){
 		exit(1);
 	}
+	//else loop through the file(s) and print it's contents
 	else{
 		for(int i=1;i<argc;i++){
         	FILE *file;
@@ -44,7 +46,7 @@ int main(int argc, char *argv[])
         	}
 	
 
-
+	// close the file(s)
          fclose(file);
 	}
 }
