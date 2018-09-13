@@ -2,7 +2,9 @@
 #include<stdlib.h>
 #include<stdio.h>
 #include<string.h>
-
+// The main program have as parameters argc and argv
+// argv is a one dimensional array of strings
+// argc contains the number of aguments passed to the program
 int main(int argc, char *argv[])
 {
 
