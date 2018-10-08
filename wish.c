@@ -92,9 +92,8 @@ int exec_everything()
 			                        printf("The exec did not work\n");
 				            }
 				        	pid=wait(NULL);
-
 				        }
-
+					
 			        }
 		        
 				}
